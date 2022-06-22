@@ -12,8 +12,10 @@ public class Main {
 
         JFrame MainWindow = new JFrame("Toolbox");
         MainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel Display = new JPanel();
 
-        MainWindow.add(new Display(), BorderLayout.CENTER);
+        MainWindow.add(Display);
+        Display.add(new Display(), BorderLayout.CENTER);
         MainWindow.pack();
         MainWindow.setVisible(true);
 
