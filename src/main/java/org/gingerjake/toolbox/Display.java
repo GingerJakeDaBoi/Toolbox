@@ -8,11 +8,7 @@ public class Display extends JPanel implements Runnable {
     private boolean isRunning = false;
     public static final int width = 800;
     public static final int height = 600;
-    private final String[] LABELS = {"System Resources"};
-    private Thread thread;
     private StateManager sm;
-    private final int FPS = 60;
-    private final long TARGET_TIME = 1000 / FPS;
 
     public Display() {
         setPreferredSize(new Dimension(width, height));
@@ -22,7 +18,7 @@ public class Display extends JPanel implements Runnable {
 
     private void start() {
         isRunning = true;
-        thread = new Thread(this);
+        Thread thread = new Thread(this);
         thread.start();
     }
 
@@ -39,19 +35,11 @@ public class Display extends JPanel implements Runnable {
         long start, elapsed, wait;
         sm = new StateManager();
         while (isRunning) {
-            start = System.nanoTime();
             tick();
             repaint();
 
-            elapsed = System.nanoTime() - start;
-            wait = (TARGET_TIME - elapsed) / 1000000;
-
-            if (wait <= 0) wait = 5;
-            try {
-                Thread.sleep(wait);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            int FPS = 60;
+            long TARGET_TIME = 1000 / FPS;
         }
     }
 }

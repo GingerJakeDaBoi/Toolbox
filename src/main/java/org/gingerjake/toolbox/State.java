@@ -4,10 +4,10 @@ import java.awt.*;
 
 public class State {
 
-    public abstract class ServerState {
+    public abstract static class ServerState {
         public abstract void init();
 
-        protected StateManager ssm;
+        protected final StateManager ssm;
 
         public abstract void draw(Graphics g);
 

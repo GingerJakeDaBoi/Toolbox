@@ -1,7 +1,5 @@
 package org.gingerjake.toolbox;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.awt.*;
 
 public class StartInit extends Display {

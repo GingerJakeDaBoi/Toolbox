@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Stack;
 
 public class StateManager {
-    public Stack<StartInit> states;
+    public final Stack<StartInit> states;
 
     public StateManager() {
         states = new Stack<>();
