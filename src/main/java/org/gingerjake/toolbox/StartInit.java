@@ -16,7 +16,7 @@ public class StartInit extends Display {
     public void draw(Graphics g) {
         //Set the background color
         g.setColor(Color.white);
-//        g.fillRect(0, 0, Display.width, Display.height); this is broken, fix before using.
+        g.fillRect(0, 0, Display.width, Display.height);
 
         //Draw the labels, look at the top for the list
         for (int i = 0; i < LABELS.length; i++) {

@@ -28,9 +28,10 @@ public class Display extends JPanel implements Runnable {
         sm.draw(g);
     }
 
-    public void tick () {
+    public void tick() {
         sm.tick();
     }
+
     public void run() {
         long start, elapsed, wait;
         sm = new StateManager();

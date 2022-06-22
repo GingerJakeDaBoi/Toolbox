@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        JFrame MainWindow = new JFrame("Toolbox");
+        JFrame MainWindow = new JFrame("Test");
         MainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel Display = new JPanel();
 
