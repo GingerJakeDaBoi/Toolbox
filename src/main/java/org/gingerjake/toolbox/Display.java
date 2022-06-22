@@ -23,7 +23,7 @@ public class Display extends JPanel implements Runnable {
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             g.clearRect(0,0,width,height);
-            sm.draw(g);
+//            sm.draw(g); throws errors, fix before using.
         }
 
     private void start() {

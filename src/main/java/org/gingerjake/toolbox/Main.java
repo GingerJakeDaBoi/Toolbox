@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println("Don't wanna be an American Idiot,");
         System.out.println("One nation under the new media...");
-        System.out.println("And can you hear the sound of Hysteria?");
+        System.out.println("And can you hear the sound of hysteria?");
         System.out.println("It's calling out to Idiot America!");
 
     }
