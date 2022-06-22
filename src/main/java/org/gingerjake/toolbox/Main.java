@@ -18,6 +18,7 @@ public class Main {
         Display.add(new Display(), BorderLayout.CENTER);
         MainWindow.pack();
         MainWindow.setVisible(true);
+        MainWindow.setResizable(false);
 
         System.out.println("Don't wanna be an American Idiot,");
         System.out.println("One nation under the new media...");

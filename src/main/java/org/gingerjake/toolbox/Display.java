@@ -6,8 +6,8 @@ import java.awt.*;
 public class Display extends JPanel implements Runnable {
 
     private boolean isRunning = false;
-    public static final int width = 800;
-    public static final int height = 600;
+    public static final int width = 1366;
+    public static final int height = 768;
     private StateManager sm;
 
     public Display() {
