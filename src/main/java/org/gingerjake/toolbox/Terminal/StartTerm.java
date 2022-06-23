@@ -1,7 +1,6 @@
 package org.gingerjake.toolbox.Terminal;
 
 import org.gingerjake.toolbox.Display.Display;
-import org.gingerjake.toolbox.Filesystem.FSManager;
 
 import java.awt.*;
 
@@ -9,7 +8,7 @@ import java.awt.*;
 public class StartTerm extends Terminal{
     private final String[] LABELS = {"foo", "bar"};
 
-    public StartTerm(FSManager ssm) {
+    public StartTerm(TermManager ssm) {
         super();
     }
 

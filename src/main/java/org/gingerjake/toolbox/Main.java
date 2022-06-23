@@ -1,7 +1,6 @@
 package org.gingerjake.toolbox;
 
 import org.gingerjake.toolbox.Display.Display;
-import org.gingerjake.toolbox.Filesystem.Filesystem;
 import org.gingerjake.toolbox.Terminal.Terminal;
 
 import javax.swing.*;
@@ -39,20 +38,6 @@ public class Main {
             TermWindow.setVisible(true);
             TermWindow.setResizable(false);
         });
-
-        //Add a button to the window
-        JButton FileButton = new JButton("Filesystem");
-        MainWindow.add(FileButton, BorderLayout.NORTH);
-        //when the button is clicked, make a new window that is black and is 400x400
-        FileButton.addActionListener(e -> {
-            JFrame FSWindow = new JFrame("Filesystem");
-            FSWindow.add(new Filesystem(), BorderLayout.CENTER);
-            FSWindow.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-            FSWindow.pack();
-            FSWindow.setVisible(true);
-            FSWindow.setResizable(false);
-        });
-
 
     }
 
