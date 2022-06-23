@@ -1,11 +1,14 @@
-package org.gingerjake.toolbox;
+package org.gingerjake.toolbox.Filesystem;
+
+import org.gingerjake.toolbox.Display.Display;
+import org.gingerjake.toolbox.Terminal.TermManager;
 
 import java.awt.*;
 
-public class StartInit extends Display {
+public class StartFS extends Filesystem{
     private final String[] LABELS = {"foo", "bar"};
 
-    public StartInit(InitManager ssm) {
+    public StartFS(TermManager ssm) {
         super();
     }
 
@@ -15,19 +18,20 @@ public class StartInit extends Display {
 
     public void draw(Graphics g) {
         //Set the background color
-        g.setColor(Color.white);
+        g.setColor(Color.black);
         g.fillRect(0, 0, Display.width, Display.height);
 
         //Draw the labels, look at the top for the list
         for (int i = 0; i < LABELS.length; i++) {
-
-            //Text in the middle of the screen
-            g.setColor(new Color(255, 0, 0, 255));
-            g.drawString(LABELS[i], Display.width / 2 - LABELS[i].length() * 5, Display.height / 2 - LABELS[i].length() * 5 + i * 20);
             //Category Labels spread apart
+            g.setFont(new Font("Arial", Font.BOLD, 56));
+            g.setColor(new Color(255, 255, 255, 255));
+            g.drawString("Files", 20, 50);
+
+            //Text that reads ">_" in the top left corner
             g.setFont(new Font("Arial", Font.BOLD, 16));
-            g.setColor(new Color(0, 0, 0, 255));
-            g.drawString(LABELS[i], 25, 80 + i * 100);
+            g.setColor(new Color(255, 255, 255, 255));
+
 
         }
     }

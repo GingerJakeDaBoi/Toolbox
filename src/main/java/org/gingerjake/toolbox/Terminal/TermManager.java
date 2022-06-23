@@ -1,14 +1,16 @@
-package org.gingerjake.toolbox;
+package org.gingerjake.toolbox.Terminal;
+
+import org.gingerjake.toolbox.Filesystem.StartFS;
 
 import java.awt.*;
 import java.util.Stack;
 
 public class TermManager {
-    public final Stack<StartTerm> states;
+    public final Stack<StartFS> states;
 
     public TermManager() {
         states = new Stack<>();
-        states.push(new StartTerm(this));
+        states.push(new StartFS(this));
     }
 
     public void tick() {

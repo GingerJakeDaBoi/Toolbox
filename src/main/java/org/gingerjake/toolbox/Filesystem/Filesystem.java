@@ -1,16 +1,16 @@
-package org.gingerjake.toolbox;
+package org.gingerjake.toolbox.Filesystem;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class Display extends JPanel implements Runnable {
+public class Filesystem extends JPanel implements Runnable {
 
     private boolean isRunning = false;
     public static final int width = 800;
     public static final int height = 600;
-    private InitManager sm;
+    private FSManager sm;
 
-    public Display() {
+    public Filesystem() {
         setPreferredSize(new Dimension(width, height));
         setFocusable(true);
         start();
@@ -34,7 +34,7 @@ public class Display extends JPanel implements Runnable {
 
     public void run() {
         long start, elapsed, wait;
-        sm = new InitManager();
+        sm = new FSManager();
         while (isRunning) {
             tick();
             repaint();

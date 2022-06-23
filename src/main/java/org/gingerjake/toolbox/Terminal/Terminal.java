@@ -1,4 +1,4 @@
-package org.gingerjake.toolbox;
+package org.gingerjake.toolbox.Terminal;
 
 import javax.swing.*;
 import java.awt.*;
