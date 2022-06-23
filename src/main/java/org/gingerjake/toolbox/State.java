@@ -7,13 +7,13 @@ public class State {
     public abstract static class ServerState {
         public abstract void init();
 
-        protected final StateManager ssm;
+        protected final InitManager ssm;
 
         public abstract void draw(Graphics g);
 
         public abstract void tick();
 
-        public ServerState(StateManager ssm) {
+        public ServerState(InitManager ssm) {
             this.ssm = ssm;
             init();
         }

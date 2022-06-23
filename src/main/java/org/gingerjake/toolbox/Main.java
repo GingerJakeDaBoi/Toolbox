@@ -5,6 +5,7 @@ package org.gingerjake.toolbox;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 public class Main {
 
@@ -21,9 +22,24 @@ public class Main {
         MainWindow.setResizable(false);
 
         System.out.println("Don't wanna be an American Idiot,");
-        System.out.println("One nation under the new media...");
-        System.out.println("And can you hear the sound of hysteria?");
-        System.out.println("It's calling out to Idiot America!");
+        for (String s : Arrays.asList("One nation under the new media...", "And can you hear the sound of hysteria?", "It's calling out to Idiot America!")) {
+            System.out.println(s);
+        }
+
+        //Add a button to the window
+        JButton TermButton = new JButton("Terminal");
+        MainWindow.add(TermButton, BorderLayout.SOUTH);
+        //when the button is clicked, make a new window that is black and is 400x400
+        TermButton.addActionListener(e -> {
+            JFrame TermWindow = new JFrame("Terminal");
+            TermWindow.add(new Terminal(), BorderLayout.CENTER);
+            TermWindow.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            TermWindow.pack();
+            TermWindow.setVisible(true);
+            TermWindow.setResizable(false);
+        });
+
 
     }
+
 }

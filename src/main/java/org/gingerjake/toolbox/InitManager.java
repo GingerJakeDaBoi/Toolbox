@@ -3,10 +3,10 @@ package org.gingerjake.toolbox;
 import java.awt.*;
 import java.util.Stack;
 
-public class StateManager {
+public class InitManager {
     public final Stack<StartInit> states;
 
-    public StateManager() {
+    public InitManager() {
         states = new Stack<>();
         states.push(new StartInit(this));
     }
